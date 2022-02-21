@@ -27,6 +27,12 @@
 .App-link {
   color: #61dafb;
 }
+img.yuvarlak {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  object-fit: cover;
+}
 
 @keyframes App-logo-spin {
   from {
