@@ -1,3 +1,14 @@
+.a:link{
+  text-decoration: none;
+}
+a:visited  { 
+
+	text-decoration: none;
+}
+.aa{
+  text-align: center;
+  
+}
 .App {
   text-align: center;
 }
@@ -32,6 +43,10 @@ img.yuvarlak {
   height: 25px;
   width: 25px;
   object-fit: cover;
+}
+.HastalikDetailPhoto{
+  border-radius: 6px;
+  border: 0px solid;
 }
 
 @keyframes App-logo-spin {

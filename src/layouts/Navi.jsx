@@ -1,15 +1,27 @@
 import React, { useState } from 'react'
 import {Navbar,Nav, Container } from 'react-bootstrap/';
+import { useNavigate } from 'react-router-dom';
 import SignedIn from './SignedIn';
 import SignedOut from './SignedOut';
 
 export default function Navi() {
-  const [isAuth, setIsAuth] = useState(true)
+ 
+    const navigate =  useNavigate()
+  const [isAuth, setIsAuth] = useState(girisYapilmisMi())
   function handleSignOut() {
-    setIsAuth(false);  
+   localStorage.clear("token");
+   setIsAuth(girisYapilmisMi());
+   navigate('/')
   }
   function handleSignIn() {
-    setIsAuth(true)
+    localStorage.setItem("token","elfdlsdşflşdlfş");
+   setIsAuth(girisYapilmisMi());
+  }
+  function girisYapilmisMi() {
+    if (localStorage.getItem("token")) 
+      return true;
+      else
+    return false;
   }
   return (
     <Navbar bg="light" expand="lg">

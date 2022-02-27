@@ -3,10 +3,22 @@ import {Dropdown } from 'react-bootstrap/';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import { Link } from 'react-router-dom';
 
 export default function SignedIn({signOut}) {
   return (
     <div>
+       <Grid container spacing={1}>
+        <Grid  item  >
+          <Link to={"/adminpanel"}>
+       <Fab size="medium" color="secondary" aria-label="add">
+      <AddIcon />
+    </Fab>
+    </Link>
+    </Grid>
+    <Grid  item >
          <Dropdown>
   <Dropdown.Toggle variant="primary" id="dropdown-basic">
   <Grid container spacing={1}>
@@ -23,7 +35,8 @@ export default function SignedIn({signOut}) {
     <Dropdown.Item href="#">Ayarlar</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
-
+</Grid>
+</Grid>
     </div>
   )
 }
